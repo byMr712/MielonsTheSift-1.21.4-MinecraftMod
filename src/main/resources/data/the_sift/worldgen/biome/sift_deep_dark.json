@@ -1,0 +1,74 @@
+{
+  "has_precipitation": false,
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "effects": {
+    "sky_color": 16777215,
+    "fog_color": 12638463,
+    "water_color": 4906216,
+    "water_fog_color": 329011,
+    "particle": {
+      "options": {
+        "type": "the_sift:sift_note"
+      },
+      "probability": 2e-05
+    }
+  },
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "the_sift:blub",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "spawn_costs": {},
+  "carvers": [
+    "the_sift:cave",
+    "the_sift:cave_extra_underground",
+    "the_sift:canyon"
+  ],
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "the_sift:siftslate_coal_ore",
+      "the_sift:siftslate_coal_ore_surface",
+      "the_sift:siftslate_diamond_ore",
+      "the_sift:siftslate_emerald_ore",
+      "the_sift:siftslate_charoite_ore",
+      "the_sift:siftslate_siftite_ore"
+    ],
+    [
+      "minecraft:sculk_vein",
+      "minecraft:sculk_patch_deep_dark",
+      "the_sift:soul_canyon",
+      "the_sift:ichor_underground_lake",
+      "the_sift:siftslate_hanging_roots_cave"
+    ],
+    [
+      "the_sift:ichor_spring"
+    ],
+    [
+      "the_sift:sift_flower_patch",
+      "the_sift:siftslate_plant_patch"
+    ],
+    [
+      "the_sift:lava_floor"
+    ]
+  ],
+  "creature_spawn_probability": 0.012
+}

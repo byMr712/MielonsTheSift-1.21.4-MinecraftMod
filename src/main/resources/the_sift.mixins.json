@@ -1,0 +1,41 @@
+{
+  "required": true,
+  "package": "mielon.thesift.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "WallBlockMixin",
+    "NoteBlockMixin",
+    "GoatHornMixin",
+    "SnifferBabyMixin",
+    "SnifferInfectionMixin",
+    "AnimalSnifferInfectionSaveMixin",
+    "SnifferStateAccess",
+    "IchorWaterloggedPickupMixin",
+    "PointedDripstoneIchorMixin",
+    "PointedDripstoneInvoker",
+    "CropBlockMixin",
+    "VegetationBlockMixin",
+    "PitcherCropBlockMixin",
+    "EnchantmentMenuMixin",
+    "EnchantmentFuelSlotMixin",
+    "AnvilMenuMixin",
+    "ServerLevelWeatherMixin",
+    "WeatherCommandMixin",
+    "LocateCommandMixin",
+    "IchorStateDefinitionMixin",
+    "IchorDefaultStateMixin",
+    "IchorBlockFluidStateMixin",
+    "IchorBlockPlacementMixin",
+    "IchorFlowAcceptanceMixin",
+    "IchorSimpleWaterloggedMixin",
+    "IchorScheduledTickMixin",
+    "WardenDarkSnifferMixin",
+    "IchorSnowballAdvancementMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "package": "mielon.thesift.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "IchorAirHudMixin",
+    "IchorWaterParticleMixin",
+    "IchorDripLandingParticleMixin",
+    "NoteParticleMixin",
+    "IrisWorldTimeUniformsMixin",
+    "SiftEnchantmentScreenMixin",
+    "CharoiteAnvilScreenMixin",
+    "WillowHangingSignEditScreenMixin",
+    "SnifferRenderStateMixin",
+    "SnifferRendererMixin",
+    "LivingEntitySnifferShakeMixin",
+    "WardenRenderStateMixin",
+    "WardenRendererMixin",
+    "WardenModelPettingMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
