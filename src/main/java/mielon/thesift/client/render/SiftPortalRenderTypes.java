@@ -7,8 +7,8 @@ public final class SiftPortalRenderTypes {
    public static final ResourceLocation MIST_TEXTURE = ResourceLocation.fromNamespaceAndPath("the_sift", "textures/block/sift_portal_mist.png");
    public static final ResourceLocation SHADERPACK_TEXTURE = ResourceLocation.fromNamespaceAndPath("the_sift", "textures/misc/sift_portal_shaderpack.png");
 
-   public static final RenderType MIST_LAYER = RenderType.entityTranslucentEmissive(MIST_TEXTURE);
-   public static final RenderType SHADERPACK_LAYER = RenderType.entityTranslucentEmissive(SHADERPACK_TEXTURE);
+   public static final RenderType MIST_LAYER = RenderType.beaconBeam(MIST_TEXTURE, true);
+   public static final RenderType SHADERPACK_LAYER = RenderType.beaconBeam(SHADERPACK_TEXTURE, true);
 
    private SiftPortalRenderTypes() {
    }
