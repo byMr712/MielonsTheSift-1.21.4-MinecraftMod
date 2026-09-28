@@ -17,7 +17,7 @@ public abstract class NoteParticleMixin {
       method = {"<init>"},
       at = {@At("TAIL")}
    )
-   private void theSift$applySonorousColor(ClientLevel level, double x, double y, double z, double color, TextureAtlasSprite sprite, CallbackInfo ci) {
+   private void theSift$applySonorousColor(ClientLevel level, double x, double y, double z, double color, CallbackInfo ci) {
       if (!(color < 100.0)) {
          int encoded = (int)Math.round(color - 100.0);
          if (encoded >= 0 && encoded <= 23) {

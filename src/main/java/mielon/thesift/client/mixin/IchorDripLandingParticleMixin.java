@@ -31,7 +31,7 @@ public abstract class IchorDripLandingParticleMixin {
       at = {@At("TAIL")}
    )
    private void theSift$rememberIchorLandingSplash(
-      ClientLevel level, double x, double y, double z, Fluid fluid, ParticleOptions landParticle, TextureAtlasSprite sprite, CallbackInfo ci
+      ClientLevel level, double x, double y, double z, Fluid fluid, ParticleOptions landParticle, CallbackInfo ci
    ) {
       if (level.dimension().equals(TheSiftDimension.LEVEL_KEY)
          && landParticle.getType() == ParticleTypes.SPLASH
