@@ -3,7 +3,7 @@
   "group": "wooden_hanging_sign",
   "key": {
     "#": "the_sift:stripped_overgrown_willow_log",
-    "X": "minecraft:iron_chain"
+    "X": "minecraft:chain"
   },
   "pattern": [
     "X X",

@@ -3,13 +3,11 @@ package mielon.thesift.client.render;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import mielon.thesift.block.entity.SiftPortalBlockEntity;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
 
 public class SiftPortalRenderer implements BlockEntityRenderer<SiftPortalBlockEntity> {
@@ -27,39 +25,27 @@ public class SiftPortalRenderer implements BlockEntityRenderer<SiftPortalBlockEn
    ) {
       BlockPos pos = blockEntity.getBlockPos();
       long gameTime = blockEntity.getLevel() != null ? blockEntity.getLevel().getGameTime() : 0L;
-      float time = ((float)gameTime + partialTick) * 0.02F;
-
-      // Camera view offset for deep realistic parallax
-      Vec3 camPos = Minecraft.getInstance().gameRenderer.getMainCamera().getPosition();
-      float camDx = (float)((double)pos.getX() + 0.5 - camPos.x);
-      float camDy = (float)((double)pos.getY() + 0.5 - camPos.y);
-      float camDz = (float)((double)pos.getZ() + 0.5 - camPos.z);
-      float distSq = camDx * camDx + camDy * camDy + camDz * camDz;
-      float distFactor = Math.min(1.0F, 1.0F / (1.0F + distSq * 0.03F));
-
-      float parallaxX = camDx * 0.035F * distFactor;
-      float parallaxZ = camDz * 0.035F * distFactor;
-      float parallaxY = camDy * 0.035F * distFactor;
+      float time = ((float)gameTime + partialTick) * 0.04F;
 
       poseStack.pushPose();
       Matrix4f pose = poseStack.last().pose();
 
-      // Pass 1: Base Celestial Cyan Sky (world-space seamless tiling)
+      // Pass 1: Semi-transparent celestial cyan backdrop (translucent, analogous to Nether portal)
       VertexConsumer skyBuf = bufferSource.getBuffer(SiftPortalRenderTypes.getShaderpackRenderType());
       renderPortalWorldFace(blockEntity, skyBuf, pose, pos,
-         time * 0.025F + parallaxX * 0.5F, time * 0.015F + parallaxZ * 0.5F,
-         0.25F, 0.82F, 0.96F, 1.0F, 0.95F, 0.0F);
+         time * 0.035F, time * 0.020F,
+         0.20F, 0.28F, 0.85F, 0.98F, 0.75F, 0.0F);
 
       // Pass 2: Deep drifting nebular mist layer
       VertexConsumer mistBuf = bufferSource.getBuffer(SiftPortalRenderTypes.getMistRenderType());
       renderPortalWorldFace(blockEntity, mistBuf, pose, pos,
-         -time * 0.045F + parallaxX * 1.2F, time * 0.035F + parallaxZ * 1.2F + parallaxY * 0.3F,
-         0.35F, 0.45F, 0.85F, 0.98F, 0.65F, 0.015F);
+         -time * 0.065F, time * 0.045F,
+         0.32F, 0.35F, 0.60F, 0.95F, 0.68F, 0.0F);
 
-      // Pass 3: Radiant high-speed surface swirl layer
+      // Pass 3: Radiant high-speed surface swirl shimmer layer
       renderPortalWorldFace(blockEntity, mistBuf, pose, pos,
-         time * 0.065F - parallaxX * 1.8F, -time * 0.05F - parallaxZ * 1.8F,
-         0.5F, 0.90F, 0.98F, 1.0F, 0.45F, 0.03F);
+         time * 0.095F, -time * 0.080F,
+         0.48F, 0.55F, 0.95F, 1.0F, 0.57F, 0.0F);
 
       poseStack.popPose();
    }

@@ -101,15 +101,15 @@ public final class IchorWaterlogging {
    }
 
    private static BooleanProperty waterloggedProperty(BlockState state) {
-      return state.hasProperty(BlockStateProperties.WATERLOGGED)
-         ? BlockStateProperties.WATERLOGGED
-         : state.getProperties()
-            .stream()
-            .filter(BooleanProperty.class::isInstance)
-            .map(BooleanProperty.class::cast)
-            .filter(property -> "waterlogged".equals(property.getName()))
-            .findFirst()
-            .orElse(null);
+      if (state.hasProperty(BlockStateProperties.WATERLOGGED)) {
+         return BlockStateProperties.WATERLOGGED;
+      }
+      for (net.minecraft.world.level.block.state.properties.Property<?> property : state.getProperties()) {
+         if (property instanceof BooleanProperty booleanProperty && "waterlogged".equals(booleanProperty.getName())) {
+            return booleanProperty;
+         }
+      }
+      return null;
    }
 
    public static void tick(MinecraftServer server) {

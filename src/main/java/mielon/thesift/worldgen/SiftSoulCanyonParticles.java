@@ -108,8 +108,10 @@ public final class SiftSoulCanyonParticles {
    }
 
    private static boolean hasFiftyOpenBlocks(ServerLevel level, BlockPos source) {
+      MutableBlockPos checkPos = new MutableBlockPos();
       for (int above = 1; above <= 50; above++) {
-         if (!level.getBlockState(source.above(above)).isAir()) {
+         checkPos.set(source.getX(), source.getY() + above, source.getZ());
+         if (!level.getBlockState(checkPos).isAir()) {
             return false;
          }
       }

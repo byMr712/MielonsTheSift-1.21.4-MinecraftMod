@@ -1,10 +1,11 @@
 package mielon.thesift.client.entity;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack.Pose;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
+import net.minecraft.client.renderer.texture.OverlayTexture;
 
 public final class RiftMesh {
    private static final int FULL_BRIGHT = 15728880;
@@ -160,8 +161,11 @@ public final class RiftMesh {
       for (RiftMesh.Quad q : halo ? this.glow : this.surface) {
          for (float[] p : q.points) {
             buffer.addVertex(pose, alongX ? p[0] : p[2], p[1], alongX ? p[2] : -p[0])
+               .setColor(q.mode, 255, 255, q.alpha)
                .setUv((p[0] + 4.5F) / 9.0F, 1.0F - (p[1] + 0.375F) / 4.25F)
-               .setColor(q.mode, 255, 255, q.alpha);
+               .setOverlay(OverlayTexture.NO_OVERLAY)
+               .setLight(FULL_BRIGHT)
+               .setNormal(pose, 0.0F, 1.0F, 0.0F);
          }
       }
    }
@@ -202,7 +206,12 @@ public final class RiftMesh {
                   float x = alongX ? p[0] : p[2];
                   float y = p[1];
                   float z = alongX ? p[2] : -p[0];
-                  buffer.addVertex(pose.pose(), x, y, z).setColor(red, green, blue, alpha).setUv(u, v).setLight(15728880).setNormal(0.0F, 0.0F, 1.0F);
+                  buffer.addVertex(pose, x, y, z)
+                     .setColor(red, green, blue, alpha)
+                     .setUv(u, v)
+                     .setOverlay(OverlayTexture.NO_OVERLAY)
+                     .setLight(FULL_BRIGHT)
+                     .setNormal(pose, 0.0F, 1.0F, 0.0F);
                }
             }
          }

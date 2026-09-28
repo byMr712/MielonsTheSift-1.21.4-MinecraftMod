@@ -23,12 +23,14 @@ import mielon.thesift.client.render.SonorousBeamRenderer;
 import mielon.thesift.entity.ModEntities;
 import mielon.thesift.particle.ModParticles;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.resources.ResourceLocation;
@@ -46,6 +48,32 @@ public final class TheSiftClient implements ClientModInitializer {
       SiftShaderCompat.initialize();
       SonorousBeamRenderTypes.initialize();
       IchorFluidRendering.register();
+
+      BlockRenderLayerMap.INSTANCE.putBlocks(
+         RenderType.cutout(),
+         ModBlocks.SCULKFLOWER_CROP,
+         ModBlocks.SCULKFLOWER,
+         ModBlocks.OVERGROWN_CHARD,
+         ModBlocks.OVERGROWN_STALKS,
+         ModBlocks.OVERGROWN_FRONDS,
+         ModBlocks.OVERGROWN_LOTUS,
+         ModBlocks.SUNBURST_PLANT,
+         ModBlocks.WHISPERBLOOM,
+         ModBlocks.SIFTSLATE_STALKS,
+         ModBlocks.HEALTHY_SCULK_SPROUTS,
+         ModBlocks.DRY_HEALTHY_SCULK_SPROUTS,
+         ModBlocks.SIFTSLATE_HANGING_ROOTS,
+         ModBlocks.OVERGROWN_HANGING_ROOTS,
+         ModBlocks.OVERGROWN_WILLOW_DOOR,
+         ModBlocks.OVERGROWN_WILLOW_TRAPDOOR,
+         ModBlocks.OVERGROWN_WILLOW_SAPLING,
+         ModBlocks.OVERGROWN_WILLOW_VINES,
+         ModBlocks.OVERGROWN_WILLOW_VINES_PLANT
+      );
+      BlockRenderLayerMap.INSTANCE.putBlocks(
+         RenderType.cutoutMipped(),
+         ModBlocks.OVERGROWN_WILLOW_FOLIAGE
+      );
       EntityModelLayerRegistry.registerModelLayer(OVERGROWN_WILLOW_BOAT_LAYER, BoatModel::createBoatModel);
       EntityModelLayerRegistry.registerModelLayer(OVERGROWN_WILLOW_CHEST_BOAT_LAYER, BoatModel::createChestBoatModel);
       EntityRendererRegistry.register(ModEntities.OVERGROWN_WILLOW_BOAT, context -> new BoatRenderer(context, OVERGROWN_WILLOW_BOAT_LAYER));

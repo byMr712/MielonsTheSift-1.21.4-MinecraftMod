@@ -6,19 +6,23 @@
         {
           "type": "minecraft:item",
           "name": "the_sift:overgrown_willow_door",
-          "condition": {
-            "type": "minecraft:match_block",
-            "blocks": "the_sift:overgrown_willow_door",
-            "state": {
-              "half": "lower"
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "the_sift:overgrown_willow_door",
+              "properties": {
+                "half": "lower"
+              }
             }
-          }
+          ]
         }
       ],
       "rolls": 1,
-      "condition": {
-        "type": "minecraft:survives_explosion"
-      }
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
     }
   ],
   "random_sequence": "minecraft:blocks/oak_door"

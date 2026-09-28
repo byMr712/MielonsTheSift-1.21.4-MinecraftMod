@@ -12,158 +12,176 @@
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snowball",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "1"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "1"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 1,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snowball",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "2"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "2"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 2,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snowball",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "3"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "3"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 3,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snowball",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "4"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "4"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 4,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snowball",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "5"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "5"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 5,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snowball",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "6"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "6"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 6,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snowball",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "7"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "7"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 7,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snowball",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "8"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "8"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 8,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 }
               ],
-              "condition": {
-                "term": {
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
+              "conditions": [
+                {
+                  "term": {
+                    "predicate": {
+                      "predicates": {
+                        "minecraft:enchantments": [
+                          {
+                            "enchantments": "minecraft:silk_touch",
+                            "levels": {
+                              "min": 1
+                            }
                           }
-                        }
-                      ]
-                    }
+                        ]
+                      }
+                    },
+                    "condition": "minecraft:match_tool"
                   },
-                  "type": "minecraft:match_tool"
-                },
-                "type": "minecraft:inverted"
-              }
+                  "condition": "minecraft:inverted"
+                }
+              ]
             },
             {
               "type": "minecraft:alternatives",
@@ -171,119 +189,133 @@
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snow",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "1"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "1"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 1,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snow",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "2"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "2"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 2,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snow",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "3"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "3"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 3,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snow",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "4"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "4"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 4,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snow",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "5"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "5"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 5,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snow",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "6"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "6"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 6,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
                 {
                   "type": "minecraft:item",
                   "name": "the_sift:ichor_snow",
-                  "condition": {
-                    "type": "minecraft:match_block",
-                    "blocks": "the_sift:ichor_snow",
-                    "state": {
-                      "layers": "7"
+                  "conditions": [
+                    {
+                      "condition": "minecraft:block_state_property",
+                      "block": "the_sift:ichor_snow",
+                      "properties": {
+                        "layers": "7"
+                      }
                     }
-                  },
-                  "modifier": [
+                  ],
+                  "functions": [
                     {
                       "count": 7,
-                      "type": "minecraft:set_count"
+                      "function": "minecraft:set_count"
                     }
                   ]
                 },
@@ -297,11 +329,13 @@
         }
       ],
       "rolls": 1,
-      "condition": {
-        "entity": "this",
-        "predicate": {},
-        "type": "minecraft:entity_properties"
-      }
+      "conditions": [
+        {
+          "entity": "this",
+          "predicate": {},
+          "condition": "minecraft:entity_properties"
+        }
+      ]
     }
   ],
   "random_sequence": "the_sift:blocks/ichor_snow"

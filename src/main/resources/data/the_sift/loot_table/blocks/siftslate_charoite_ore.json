@@ -9,41 +9,43 @@
             {
               "type": "minecraft:item",
               "name": "the_sift:siftslate_charoite_ore",
-              "condition": {
-                "predicate": {
-                  "predicates": {
-                    "minecraft:enchantments": [
-                      {
-                        "enchantments": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+              "conditions": [
+                {
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch",
+                          "levels": {
+                            "min": 1
+                          }
                         }
-                      }
-                    ]
-                  }
-                },
-                "type": "minecraft:match_tool"
-              }
+                      ]
+                    }
+                  },
+                  "condition": "minecraft:match_tool"
+                }
+              ]
             },
             {
               "type": "minecraft:item",
               "name": "the_sift:charoite",
-              "modifier": [
+              "functions": [
                 {
                   "count": {
                     "type": "minecraft:uniform",
                     "max": 9,
                     "min": 4
                   },
-                  "type": "minecraft:set_count"
+                  "function": "minecraft:set_count"
                 },
                 {
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:ore_drops",
-                  "type": "minecraft:apply_bonus"
+                  "function": "minecraft:apply_bonus"
                 },
                 {
-                  "type": "minecraft:explosion_decay"
+                  "function": "minecraft:explosion_decay"
                 }
               ]
             }

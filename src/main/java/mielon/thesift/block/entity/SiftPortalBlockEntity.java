@@ -82,7 +82,7 @@ public class SiftPortalBlockEntity extends TheEndPortalBlockEntity {
    }
 
    public static void tick(Level level, BlockPos pos, BlockState state, SiftPortalBlockEntity blockEntity) {
-      if (!level.isClientSide() && level instanceof ServerLevel serverLevel) {
+      if (blockEntity.animationMode != 0 && !level.isClientSide() && level instanceof ServerLevel serverLevel) {
          blockEntity.tickAnimation(serverLevel);
       }
    }
