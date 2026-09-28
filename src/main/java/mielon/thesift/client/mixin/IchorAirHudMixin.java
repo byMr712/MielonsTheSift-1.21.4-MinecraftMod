@@ -22,9 +22,9 @@ public abstract class IchorAirHudMixin {
       method = {"renderAirBubbles"},
       at = @At(
          value = "INVOKE",
-         target = "Lnet/minecraft/client/gui/GuiGraphics;blitSprite(Lnet/minecraft/resources/ResourceLocation;IIII)V"
+         target = "Lnet/minecraft/client/gui/GuiGraphics;blitSprite(Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIII)V"
       ),
-      index = 0
+      index = 1
    )
    private ResourceLocation theSift$useIchorAirSprite(ResourceLocation original) {
       LocalPlayer player = Minecraft.getInstance().player;
