@@ -430,18 +430,6 @@
         0,
         -7
       ]
-    },
-    "on_shelf": {
-      "rotation": [
-        90,
-        0,
-        0
-      ],
-      "translation": [
-        0,
-        0,
-        4
-      ]
     }
   },
   "groups": [
