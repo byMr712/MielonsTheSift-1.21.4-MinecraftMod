@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipes": "the_sift:siftite_spear_smithing"
+        "recipe": "the_sift:siftite_spear_smithing"
       }
     }
   },
@@ -25,7 +25,7 @@
     ]
   ],
   "rewards": {
-    "recipes": [
+    "recipe": [
       "the_sift:siftite_spear_smithing"
     ]
   }

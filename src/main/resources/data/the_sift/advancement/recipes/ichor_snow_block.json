@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipes": "the_sift:ichor_snow_block"
+        "recipe": "the_sift:ichor_snow_block"
       }
     }
   },
@@ -25,7 +25,7 @@
     ]
   ],
   "rewards": {
-    "recipes": [
+    "recipe": [
       "the_sift:ichor_snow_block"
     ]
   }

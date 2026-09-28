@@ -15,15 +15,17 @@
     "ancient_city": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "entity": "this",
-          "predicate": {
-            "minecraft:location": {
-              "structures": "minecraft:ancient_city"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:ancient_city"
+              }
             }
-          },
-          "type": "minecraft:entity_properties"
-        }
+          }
+        ]
       }
     }
   },

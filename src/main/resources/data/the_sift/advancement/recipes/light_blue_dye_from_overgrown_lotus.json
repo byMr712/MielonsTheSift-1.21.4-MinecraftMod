@@ -14,7 +14,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipes": "the_sift:light_blue_dye_from_overgrown_lotus"
+        "recipe": "the_sift:light_blue_dye_from_overgrown_lotus"
       }
     }
   },
@@ -25,7 +25,7 @@
     ]
   ],
   "rewards": {
-    "recipes": [
+    "recipe": [
       "the_sift:light_blue_dye_from_overgrown_lotus"
     ]
   }
