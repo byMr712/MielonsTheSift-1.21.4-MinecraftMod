@@ -70,7 +70,8 @@ public final class IchorWaterlogging {
    }
 
    public static BlockState fillState(BlockState state) {
-      return (BlockState)setFluidlogged(state, true).setValue(IchorState.ICHORLOGGED, true);
+      BlockState result = setFluidlogged(state, true);
+      return result.hasProperty(IchorState.ICHORLOGGED) ? (BlockState)result.setValue(IchorState.ICHORLOGGED, true) : result;
    }
 
    public static boolean fill(LevelAccessor level, BlockPos pos, BlockState state) {

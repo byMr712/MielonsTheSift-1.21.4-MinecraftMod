@@ -3,7 +3,6 @@
   "package": "mielon.thesift.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "WallBlockMixin",
     "NoteBlockMixin",
     "GoatHornMixin",
     "SnifferBabyMixin",
@@ -22,8 +21,6 @@
     "ServerLevelWeatherMixin",
     "WeatherCommandMixin",
     "LocateCommandMixin",
-    "IchorStateDefinitionMixin",
-    "IchorDefaultStateMixin",
     "IchorBlockFluidStateMixin",
     "IchorBlockPlacementMixin",
     "IchorFlowAcceptanceMixin",
