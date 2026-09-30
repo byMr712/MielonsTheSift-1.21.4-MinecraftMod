@@ -8,7 +8,7 @@
 ![ModMenu](https://img.shields.io/badge/ModMenu-Supported-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-Port and adaptation of **Mielon's The Sift** mod for **Minecraft 1.21.4 (Fabric)** by **byMr712**.
+Port and adaptation of **Mielon's The Sift** mod for **Minecraft 1.21.4 (Fabric)**.
 
 Original Developer: [Mielon/mielons-the-sift](https://modrinth.com/mod/mielons-the-sift).
 
@@ -42,15 +42,14 @@ Original Developer: [Mielon/mielons-the-sift](https://modrinth.com/mod/mielons-t
 - Client item definitions (`assets/the_sift/items/*.json`) configured according to Minecraft 1.21.4 standards.
 - Dimension sky, cloud, and weather rendering ported via Fabric API `DimensionRenderingRegistry`.
 - Added complete Russian localization (`ru_ru.json`) alongside English (`en_us.json`).
-- Configured fast build scripts and auto-copy to the launcher instance folder.
+- Configured optimized build scripts and toolchain.
 
 ---
 
-## Requirements
+## Installation
 
 1. Download the latest release from [GitHub Releases](https://github.com/byMr712/Mielon's-The-Sift-1.21.4-MinecraftMod/releases).
 2. Requires:
-   - [Fabric Loader](https://fabricmc.net/) (Minecraft 1.21.4)
    - [Fabric API](https://modrinth.com/mod/fabric-api)
    - [GeckoLib](https://modrinth.com/mod/geckolib) (>=4.8.5)
 3. Place the `.jar` file into your `mods` folder.

@@ -8,7 +8,7 @@
 ![ModMenu](https://img.shields.io/badge/ModMenu-Supported-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-Порт и адаптация модификации **Mielon's The Sift** для **Minecraft 1.21.4 (Fabric)** от **byMr712**.
+Порт и адаптация модификации **Mielon's The Sift** для **Minecraft 1.21.4 (Fabric)**.
 
 Оригинальный разработчик: [Mielon/mielons-the-sift](https://modrinth.com/mod/mielons-the-sift).
 
@@ -42,7 +42,7 @@
 - Все определения предметов приведены к стандарту Client Item Definitions 1.21.4 (`assets/the_sift/items/*.json`).
 - Рендеринг атмосферы, неба и облаков интегрирован через Fabric API `DimensionRenderingRegistry`.
 - Добавлена полная русская локализация (`ru_ru.json`) и сохранена оригинальная английская (`en_us.json`).
-- Настроена быстрая сборка и автокопирование скомпилированного мода в лаунчер.
+- Настроена оптимизированная конфигурация сборки мода.
 
 ---
 
@@ -50,7 +50,6 @@
 
 1. Скачайте последнюю версию со страницы [GitHub Releases](https://github.com/byMr712/Mielon's-The-Sift-1.21.4-MinecraftMod/releases).
 2. Требуются:
-   - [Fabric Loader](https://fabricmc.net/) (Minecraft 1.21.4)
    - [Fabric API](https://modrinth.com/mod/fabric-api)
    - [GeckoLib](https://modrinth.com/mod/geckolib) (версии >=4.8.5)
 3. Поместите `.jar` файл в папку `mods`.
