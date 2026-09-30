@@ -22,7 +22,7 @@ public final class SiftSoulCanyonParticles {
 
    public static void tick(MinecraftServer server) {
       ServerLevel level = server.getLevel(TheSiftDimension.LEVEL_KEY);
-      if (level != null) {
+      if (level != null && !level.players().isEmpty()) {
          if (--refreshCooldown <= 0) {
             refreshCooldown = 400;
             clusters = SiftLandmarkTracker.snapshot(SiftLandmarkTracker.Kind.SOUL_CANYON_CLUSTER);
